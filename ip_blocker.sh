@@ -34,14 +34,13 @@ iptables -F OUTPUT
 iptables -F FORWARD
 
 #call for all ports
-block_port 80
-block_port 53
-block_port 139
+block_port 80 #block http
+block_port 53 #block DNS
+block_port 139 #block SMB
 block_port 445
-block_port 5050
+block_port 5050 #block serveral other services
 block_port 8080
 block_port 8081
 block_port 8181
 block_port 9091
 block_port 8443
-block_port 8333
